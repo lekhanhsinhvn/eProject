@@ -1,7 +1,26 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding-top: 70px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
+}
+
+.thumbnail {
+    height: 400px;
+}
+
+.thumbnail img {
+    width: 250px;
+    height: 250px;
+}
+
+div.caption{
+	overflow: hidden;
+	text-align: center;
+}
+div.caption h3.title{
+	white-space: nowrap;
+    display: inline-block;
 }
