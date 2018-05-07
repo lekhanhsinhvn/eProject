@@ -9,5 +9,5 @@ var schema = new Schema({
     price: { type: Number, require: true },
     unit: { type: String, require: true }
 });
-
+schema.index({'$**': 'text'});
 module.exports = mongoose.model('Product', schema);

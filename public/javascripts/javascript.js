@@ -1,3 +1,4 @@
+//scrolling title
 $(document).ready(function() {
     var boxwidth = $("div.caption").width();
     $("h3.title").hover(
