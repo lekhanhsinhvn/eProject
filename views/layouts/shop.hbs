@@ -20,8 +20,11 @@
 </head>
 
 <body>
-    <header id="header">{{> header}}</header>
-        <div class="container-fluid">{{{body}}}</div>
+        {{> header}}
+        <div class="container-fluid" id="body">
+            <div class="col-xs-3 col-md-3 sidenav">{{>sidebar}}</div>
+            <div class="col-xs-9 col-md-9">{{{body}}}</div>
+        </div>
         <footer id="footer">
             {{> footer}}
         </footer>

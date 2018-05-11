@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
     });
 
 });
-router.get('/product',function(req,res){
+router.get('/shop',function(req,res){
 	var noMatch = null;
 	if(req.query.search){
 		const regex = new RegExp(escapeRegex(req.query.search), 'gi');
@@ -28,12 +28,12 @@ router.get('/product',function(req,res){
 				if (docs.length<1) {
 					noMatch = "No Match, please try again.";
 				}
-				res.render('shop/product', {title: 'Product',  products: docs ,noMatch: noMatch});
+				res.render('shop/shop', {title: 'Products', layout: 'shop',  products: docs ,noMatch: noMatch});
 			}
 		});
 	}else{
 		var products = Product.find(function(err, docs) {
-        	res.render('shop/product', {title: 'Product',  products: docs});
+        	res.render('shop/shop', {title: 'Products', layout: 'shop',  products: docs});
     	});
 	}
 });
