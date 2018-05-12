@@ -7,11 +7,8 @@ var logger = require('morgan');
 
 var routes = require('./routes/index');
 var userRouter = require('./routes/user');
-
-
 var exphbs = require('express-handlebars');
 var mongoose = require('mongoose');
-
 var app = express();
 
 var session = require('express-session')
@@ -19,13 +16,13 @@ var passport = require('passport');
 var flash = require('connect-flash')
 var validator = require('express-validator');
 var MongoStore = require('connect-mongo')(session);
-
+var helpers = require('handlebars-helpers')();
 
 mongoose.connect('mongodb://localhost:27017/star_organic');
 require('./config/passport');
 // view engine setup
 
-app.engine('.hbs', exphbs({ defaultLayout: 'layout', extname: '.hbs' }));
+app.engine('.hbs', exphbs({ defaultLayout: 'layout', extname: '.hbs',helpers: require('handlebars-helpers')() }));
 app.set('view engine', '.hbs');
 app.use(logger('dev'));
 app.use(express.json());

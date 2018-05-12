@@ -1,33 +1,40 @@
-
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 body {
-	margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color : #f8f2e5;
 }
 
-h1{
-	text-align:center;
+h1 {
 }
-a:hover{
-    color: #fff;
+
+a:hover {
+    color: black;
     text-decoration: none;
 }
-#body{
-    padding-top:120px;
-    padding-bottom: 70px;
+
+#body {
+    padding-top: 120px;
+    padding-bottom: 50px;
+    min-height: 92.2vh;
 }
-.row.content {height: auto;} 
+
+.row.content {
+    height: auto;
+}
+
 #top-bar {
     width: 100%;
     height: 70px;
     box-shadow: none;
     -webkit-box-shadow: none;
-    background: rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.8);
     border-bottom: 0px;
     font-weight: bold;
 }
@@ -44,15 +51,19 @@ a:hover{
     width: 125px;
     height: 75px;
 }
-#top-bar .navbar-toggle{
-	position: fixed;
-	right: 10px;
-	top: 10px;
+
+#top-bar .navbar-toggle {
+    position: fixed;
+    right: 10px;
+    top: 10px;
 }
-#top-bar input[type=text],.search-container button {
-        text-align: left;
-        padding: 10px;
+
+#top-bar input[type=text],
+.search-container button {
+    text-align: left;
+    padding: 10px;
 }
+
 #top-bar .search-container button {
     background: #ddd;
     font-size: 14px;
@@ -71,63 +82,88 @@ a:hover{
 #top-bar #navbar-collapse-1 a:hover {
     border-bottom: 6px solid black;
 }
-#top-bar #navbar-collapse-1 .dropdown-menu li a:hover{
+
+#top-bar #navbar-collapse-1 .dropdown-menu li a:hover {
     border: 0;
 }
 
 #myCarousel {
     display: none;
-    width:100%;
+    width: 100%;
 }
+
 #myCarousel img {
     width: 100%;
-    height: 465px;
+    height: 500px;
 }
-.header-text{
-	position: absolute;
+
+#productCarousel .carousel-inner {
+    width: 80%;
+    margin: auto;
+    text-align:center;
+}
+
+#productCarousel .carousel-control {
+    background-image: none;
+    color: black;
+}
+#productCarousel .glyphicon {
+    top:65%;
+}
+.header-text {
+    position: absolute;
     top: 20%;
     left: 1.8%;
     right: auto;
     width: 100%;
 }
-.bs-sidenav{
+
+.bs-sidenav {
     position: fixed;
-    width:220px;
+    min-width: 210px;
+    width: 20%;
     border: 2px solid black;
     -o-border-radius: 8px;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     -ms-border-radius: 8px;
     border-radius: 8px;
+    display: none;
 }
-.bs-sidenav a{
+
+.bs-sidenav a {
     border-bottom: 1px solid black;
     color: black;
-    font-size:16px;
+    font-size: 16px;
 }
-.bs-sidenav a:hover{
+
+.bs-sidenav a:hover {
     padding-left: 20px;
     color: black;
 }
+
 .projects_holder {
-    width:200px;
+    width: 200px;
     padding-bottom: 20px;
     font-size: .1px;
     line-height: 0;
     list-style-type: none;
     text-align: justify;
+    margin: auto;
 }
-.projects_holder .mix .image{
-    width:200px;
-    height:200px;
+
+.projects_holder .mix .image {
+    width: 200px;
+    height: 200px;
     position: relative;
     display: block;
     overflow: hidden;
     -moz-transform: translateZ(0px);
     -webkit-transform: translateZ(0px);
 }
+
 .projects_holder article span.text_holder {
-    text-align:center;
+    text-align: center;
     background-color: rgba(21, 21, 21, 0.25);
     bottom: 0;
     display: inline-block;
@@ -145,17 +181,21 @@ a:hover{
     overflow: hidden;
     z-index: 200;
 }
+
 .projects_holder article:hover span.text_holder {
     height: 100%!important;
 }
+
 .projects_holder article .image_holder:hover span.text_holder {
     opacity: 1;
     filter: alpha(opacity=100);
 }
+
 .projects_holder.hover_text.with_mask article .image_holder:hover .image_hover {
     opacity: 0;
     filter: alpha(opacity=0);
 }
+
 .projects_holder article span.text_holder span.text_outer {
     display: table;
     text-align: center;
@@ -164,6 +204,7 @@ a:hover{
     height: 100%;
     overflow: hidden;
 }
+
 .projects_holder article span.text_holder span span.text_inner {
     display: table-cell;
     text-align: center;
@@ -173,10 +214,14 @@ a:hover{
     margin: 0;
     padding: 0;
 }
-.projects_holder:after, .projects_holder:before {
+
+.projects_holder:after,
+.projects_holder:before {
     content: "";
     display: inline-block!important;
-    width: 100%}
+    width: 100%
+}
+
 .projects_holder>.mix {
     display: none;
     position: relative;
@@ -187,7 +232,8 @@ a:hover{
     transition: all .7s ease-out;
     text-align: left;
 }
-.projects_holder article .image img{
+
+.projects_holder article .image img {
     position: relative;
     display: block;
     width: 100%;
@@ -203,18 +249,21 @@ a:hover{
     -o-transition: -o-transform .3s ease-in-out;
     transition: transform .3s ease-in-out;
 }
-.projects_holder article .image_holder:hover .image img{
+
+.projects_holder article .image_holder:hover .image img {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1);
 }
+
 .projects_holder article .image_holder {
     display: block;
     position: relative;
 }
-.qbutton{
+
+.qbutton {
     position: relative;
     display: inline-block;
     width: auto;
@@ -250,34 +299,48 @@ a:hover{
     box-sizing: initial!important;
     background-color: rgb(115, 230, 0);
 }
-.projects_holder .caption{
-    width:200px;
+
+.projects_holder .caption {
+    width: 200px;
     overflow: hidden;
-    text-align: center;   
+    text-align: center;
 }
-.projects_holder .title{
+
+.projects_holder .title {
     white-space: nowrap;
     display: inline-block;
 }
-#add-to-cart:hover{
-    background-color:#4d9900;
+
+#add-to-cart:hover {
+    background-color: #4d9900;
 }
-#home_body h1{
-    font: 50 75px/1.3 'Oleo Script', Helvetica, sans-serif;
+#home_body {
+    padding-bottom: 30px;
+}
+#home_body h1 {
+    font: 50 90px/1.3 'Oleo Script', Helvetica, sans-serif;
+    text-align:center;
+}
+#home_body h2 {
+    font: 50 60px/1.3 'Oleo Script', Helvetica, sans-serif;
+    text-align:center;
 }
 #home_body .section {
     list-style: none outside none;
     text-align: center;
-    padding:0;
+    padding: 0;
 }
-#home_body .section li{
+
+#home_body .section li {
     margin: 0 10px;
     display: inline;
 }
-#home_body .section img{
-    width:200px;
-    height:150px;
+
+#home_body .section img {
+    width: 200px;
+    height: 150px;
 }
+
 #home_body .section li .contain {
     position: relative;
     color: white;
@@ -285,29 +348,40 @@ a:hover{
     font-weight: bold;
     display: inline;
 }
-#home_body .section li .centered{
+
+#home_body .section li .centered {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#footer{
-    height:50px;
+
+#footer {
+    height: 100px;
     background-color: #1e1e1e;
 }
+#footer .col-sm-6 {
+    padding-top: 5px;
+    height: 40px;
+}
+
 .copyright-text p {
-    line-height:40px;
+    line-height: 40px;
     padding-left: 40px;
     color: #ccc;
+    margin: 0;
 }
-.social-link{
+
+.social-link {
     padding-right: 40px;
-    display: none;
+    margin: 0;
 }
+
 .social-link li {
     display: inline-block;
     margin: 0 5px;
 }
+
 .social-link li a {
     width: 40px;
     height: 40px;
@@ -316,6 +390,37 @@ a:hover{
     font-size: 14px;
     transition: .5s;
 }
+#detail .image img{
+    width:80%;
+    height: 80%;
+}
+#detail h1{
+    padding-top: 20px;
+    font-size: 50px;
+}
+#detail .description{
+    height: 160px;
+}
+#detail p{
+    line-height:20px;
+    padding-top: 20px;
+    font-size: 20px;
+}
+#detail .add-to-cart{
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+#detail .add-to-cart:hover{
+    
+}
+
+#contactus .credit{
+    padding:10px;
+    width: 170px;
+    height: 170px;
+}
+
 @media (min-width: 768px) {
     #top-bar .navbar-brand {
         padding-left: 2vw;
@@ -324,13 +429,16 @@ a:hover{
         padding-left: 2vw;
     }
     #top-bar input[type=text] {
-    	width: 25vw;
+        width: 25vw;
         border: 1px solid #ccc;
     }
     #myCarousel {
         display: block;
     }
-    .social-link{
+    #footer {
+        height: 50px;
+    }
+    .bs-sidenav {
         display: block;
     }
 }
