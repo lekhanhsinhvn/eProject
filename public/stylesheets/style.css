@@ -161,7 +161,10 @@ a:hover {
     -moz-transform: translateZ(0px);
     -webkit-transform: translateZ(0px);
 }
-
+.projects_holder .mix .image img{
+    height: 200px;
+    width: 200px;
+}
 .projects_holder article span.text_holder {
     text-align: center;
     background-color: rgba(21, 21, 21, 0.25);
