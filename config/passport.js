@@ -34,6 +34,9 @@ passport.use('local.signup', new LocalStrategy({
         if (user) {
             return done(null, false, { message: 'Email is already in use.' });
         }
+        if ( password != req.body.password_confirm ) {
+            return done(null, false, {message: 'Those passwords did not match.Try again'});
+        }
         var newUser = new User();
         newUser.email = email;
         newUser.password = newUser.encryptPassword(password);

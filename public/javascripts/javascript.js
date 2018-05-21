@@ -1,7 +1,7 @@
 //scrolling title
 $(document).ready(function() {
     var boxwidth = $("div.caption").width();
-    $("h3.title").hover(
+    $("a.title").hover(
       function () {
         $(this).stop().animate({
             textIndent: "-" + ( $(this).width() - $(this).parent().width() ) + "px"  
@@ -14,4 +14,3 @@ $(document).ready(function() {
       }
     );
 });
-

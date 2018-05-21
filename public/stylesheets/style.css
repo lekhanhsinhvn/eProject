@@ -8,10 +8,13 @@ body {
     margin: 0;
     padding: 0;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color : #f8f2e5;
+    background-color: #f8f2e5;
 }
 
-h1 {
+h1 {}
+
+a {
+    color: black;
 }
 
 a:hover {
@@ -87,29 +90,93 @@ a:hover {
     border: 0;
 }
 
-#myCarousel {
-    display: none;
-    width: 100%;
+.carousel-fade .carousel-inner .item {
+    -webkit-transition-property: opacity;
+    transition: opacity 2s;
 }
 
-#myCarousel img {
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    opacity: 0;
+}
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.carousel-fade .carousel-control {
+    z-index: 2;
+}
+
+#slider {
+    width: 80%;
+    height: 450px;
+    margin: auto;
+}
+
+#slider .carousel-inner {
+    height: 100%;
+}
+
+#slider .img-holder {
+    position: relative;
+    width: 60%;
+    z-index: 10
+}
+#slider .board{
+    float: right;
+    background-color: white;
+    width: 50%;
+    height: 90%;
+    position: absolute;
+    top: 20px;
+    right: 0px;    
+}
+.detail-holder {
+    text-align: center;
+    overflow: visible !important;
+    padding: 10% 0 10% 10%;
+    float: right;
+    width: 50%;
+    height: 90%;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+}
+
+#slider img {
     width: 100%;
-    height: 500px;
+    height: 100%;
+    box-shadow: 8px 8px 10px #aaa;
 }
 
 #productCarousel .carousel-inner {
     width: 80%;
     margin: auto;
-    text-align:center;
+    text-align: center;
 }
 
 #productCarousel .carousel-control {
     background-image: none;
     color: black;
 }
+
 #productCarousel .glyphicon {
-    top:65%;
+    top: 65%;
 }
+
 .header-text {
     position: absolute;
     top: 20%;
@@ -118,11 +185,27 @@ a:hover {
     width: 100%;
 }
 
+.header-text h2 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+#shop {
+    background-color: white;
+    border: 2px solid white;
+    -o-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -ms-border-radius: 18px;
+    border-radius: 18px;
+}
+
 .bs-sidenav {
+    background-color: rgba(255, 255, 255, 0.8);
     position: fixed;
     min-width: 210px;
     width: 20%;
-    border: 2px solid black;
+    border: 3px solid black;
     -o-border-radius: 8px;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -161,10 +244,12 @@ a:hover {
     -moz-transform: translateZ(0px);
     -webkit-transform: translateZ(0px);
 }
-.projects_holder .mix .image img{
+
+.projects_holder .mix .image img {
     height: 200px;
     width: 200px;
 }
+
 .projects_holder article span.text_holder {
     text-align: center;
     background-color: rgba(21, 21, 21, 0.25);
@@ -317,17 +402,21 @@ a:hover {
 #add-to-cart:hover {
     background-color: #4d9900;
 }
+
 #home_body {
     padding-bottom: 30px;
 }
+
 #home_body h1 {
     font: 50 90px/1.3 'Oleo Script', Helvetica, sans-serif;
-    text-align:center;
+    text-align: center;
 }
+
 #home_body h2 {
     font: 50 60px/1.3 'Oleo Script', Helvetica, sans-serif;
-    text-align:center;
+    text-align: center;
 }
+
 #home_body .section {
     list-style: none outside none;
     text-align: center;
@@ -363,6 +452,7 @@ a:hover {
     height: 100px;
     background-color: #1e1e1e;
 }
+
 #footer .col-sm-6 {
     padding-top: 5px;
     height: 40px;
@@ -386,6 +476,7 @@ a:hover {
 }
 
 .social-link li a {
+    color: white;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -393,33 +484,37 @@ a:hover {
     font-size: 14px;
     transition: .5s;
 }
-#detail .image img{
-    width:80%;
+
+#detail .image img {
+    width: 80%;
     height: 80%;
 }
-#detail h1{
+
+#detail h1 {
     padding-top: 20px;
     font-size: 50px;
 }
-#detail .description{
+
+#detail .description {
     height: 160px;
 }
-#detail p{
-    line-height:20px;
+
+#detail p {
+    line-height: 20px;
     padding-top: 20px;
     font-size: 20px;
 }
-#detail .add-to-cart{
+
+#detail .add-to-cart {
     float: right;
     font-size: 20px;
     font-weight: bold;
 }
-#detail .add-to-cart:hover{
-    
-}
 
-#contactus .credit{
-    padding:10px;
+#detail .add-to-cart:hover {}
+
+#contactus .credit {
+    padding: 10px;
     width: 170px;
     height: 170px;
 }

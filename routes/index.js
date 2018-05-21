@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
         }
         asyncLoop(0, function() {
             console.log(products);
-            res.render('index', { title: 'Star Organic farm', layout: 'home', products: products });
+            res.render('index', { title: 'Star Organic farm', products: products });
         });
 
     });
