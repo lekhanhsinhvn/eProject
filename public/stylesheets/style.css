@@ -445,3 +445,15 @@ a:hover {
         display: block;
     }
 }
+.col-md-12 h2{
+    color: #ce3ba7;
+    font-family: cursive;
+    font-size: 60px;
+}
+.col-md-12 h3{
+    color:
+#1e0923;
+
+    font-family: cursive;
+    font-size: 36px;
+}
