@@ -1,7 +1,6 @@
-
-{{# if products }}
     <div class="row">
-        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3" style="background:white; margin-top:20px; margin-bottom:20px ;padding-bottom:20px; padding-top:20px; min-height:63.2vh;">
+            {{# if products }}
             <ul class="list-group">
                 {{# each products }}
                     <li class="list-group-item">
@@ -18,23 +17,11 @@
                     </li>
                 {{/each}}
             </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
             <strong>Total: {{ totalPrice }}</strong>
+            <a href="/checkout" type="button" class="btn btn-success" style="float:right;">Checkout</a>
         </div>
-    </div>
-    <hr>
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-            <a href="/checkout" type="button" class="btn btn-success">Checkout</a>
-        </div>
-    </div>
-{{ else }}
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+        {{ else }}
             <h2>No Items in Cart</h2>
-        </div>
+        {{/if}}
     </div>
-{{/if}}
+

@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var Product = require('../models/product');
 var Cart = require('../models/cart');
 var Order = require('../models/order');
+var Contact = require('../models/contact');
 mongoose.connect('mongodb://localhost:27017/star_organic');
 
 /* GET home page. */
@@ -22,7 +23,7 @@ router.get('/', function(req, res, next) {
         }
         asyncLoop(0, function() {
             console.log(products);
-            res.render('index', { title: 'Star Organic farm', products: products });
+            res.render('index', { title: 'Star Organic farm', layout: 'home', products: products });
         });
 
     });
@@ -129,6 +130,20 @@ router.get('/product/:id', function(req, res, next) {
 
 router.get('/contactus', function(req, res, next) {
     res.render('contactus', { title: 'Contact Us' });
+});
+router.post('/contact',function(req,res,next){
+    var contact = new Contact({
+        name: req.body.name,
+        email: req.body.email,
+        subject: req.body.subject,
+        message: req.body.message
+    });
+    contact.save(function(err, result) {
+        if (err) {
+            return res.render('contactus');
+        }
+        res.redirect('/');
+    });
 });
 module.exports = router;
 

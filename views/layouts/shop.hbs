@@ -20,10 +20,11 @@
 </head>
 
 <body>
-        {{> header}}
-        <div class="container-fluid" id="body">
-            <div class="col-lg-3 col-md-3 col-sm-3 sidenav">{{>sidebar}}</div>
-            <div class="col-lg-9 col-md-9 col-sm-9" id="shop">{{{body}}}</div>
+        <header id="header">{{> header}}</header>
+        <div class="container-fluid" id="body" style="margin: 50px 15px 50px 15px; background:white;">
+                <div class="col-lg-3 col-md-3 col-sm-3 sidenav">{{>sidebar}}</div>
+                <div class="col-lg-9 col-md-9 col-sm-9" id="shop">{{{body}}}</div>
+            
         </div>
         <footer id="footer">
             {{> footer}}

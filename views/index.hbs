@@ -1,127 +1,134 @@
-
-<div class="container-fluid">
+<div class="container-fluid wrapper">
 	<div id="slider" class="carousel slide carousel-fade" data-ride="carousel">
 		<div class="carousel-inner">
-			<div class="board"></div>
 			<div class="item active">
 				<div class="img-holder">
 					<img src="/images/slide1.jpg">
 				</div>
-				<div class="detail-holder">qwertyuiop</div>
+				<div class="detail-holder">
+					<h2 style="padding-top:1vw;"><strong>Rice</strong></h2>
+					<h3>100% certified organic rice</h3>
+					<p style="padding-top:3vw;">The rice has a slightly nutty flavour and does not become sticky on cooking. These Champagne of India contains a unique aroma that makes you more hungry with every sniff</p>
+				</div>
 			</div>
 			<div class="item">
 				<div class="img-holder">
-					<img src="/images/slide1.jpg">
+					<img src="/images/slide2.jpg">
 				</div>
-				<div class="detail-holder">zxcvbnbvczcvc</div>
+				<div class="detail-holder">
+					<h2 style="padding-top:1vw;"><strong>Fruit Pulps</strong></h2>
+					<p style="padding-top:3vw;">Fruit pulp is the most basic food product obtained from fresh fruit processing. Fruit pulps can be cold stored for long periods of time, but they also can be used to fabricate juices, ice creams, sweets, jellies and yogurts.</p>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="container-fluid">
-	<div id="productCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-	  <!-- Wrapper for slides -->
-	  <div class="carousel-inner">
-	    <div class="item active">
-	    	<h2>Pulses</h2>
-	    	{{#each products}}
-				{{#contains this.category "pulses"}}
-					<div class="col-sm-6 col-md-6 col-lg-3">
-				        <div class="projects_holder">
-				            <div class="caption">
-				                <a class="" href="/product/{{this._id}}">
-				                    <h3 class="title">{{this.title}}</h3>
-				                </a>
-				            </div>
-				            <article class="mix mix_all" style="display: inline-block; opacity: 1;">
-				                <div class="image_holder">
-				                    <a class="" href="/product/{{this._id}}"><span class="image"><img src="{{ this.imgPath }}" class="" alt=""></span></a>
-				                     <span class="text_holder">
-				                        <span class="text_outer">
-				                            <span class="text_inner">
-				                                <p class="qbutton" href="#" >${{this.price}}</p>
-				                                <a class="qbutton" id="add-to-cart" href="/cart/{{this._id}}" >Add to cart</a>
-				                            </span>
-				                        </span> 
-				                    </span>
-				                </div>
-				            </article>
-				        </div> 
-				    </div>
-				{{/contains}}
-			{{/each}}
-	    </div>
+<div id="home_body">
+	<div class="container-fluid body-wrapper">
+		<h1>Welcome to Star Organic farm !</h1>
+		<div id="productCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner">
+		    <div class="item active">
+		    	<h2>Pulses</h2>
+		    	{{#each products}}
+					{{#contains this.category "pulses"}}
+						<div class="col-sm-6 col-md-6 col-lg-3">
+					        <div class="projects_holder">
+					            <div class="caption">
+					                <a class="" href="/product/{{this._id}}">
+					                    <h3 class="title">{{this.title}}</h3>
+					                </a>
+					            </div>
+					            <article class="mix mix_all" style="display: inline-block; opacity: 1;">
+					                <div class="image_holder">
+					                    <a class="" href="/product/{{this._id}}"><span class="image"><img src="{{ this.imgPath }}" class="" alt=""></span></a>
+					                     <span class="text_holder">
+					                        <span class="text_outer">
+					                            <span class="text_inner">
+					                                <p class="qbutton" href="#" >${{this.price}}</p>
+					                                <a class="qbutton" id="add-to-cart" href="/cart/{{this._id}}" >Add to cart</a>
+					                            </span>
+					                        </span> 
+					                    </span>
+					                </div>
+					            </article>
+					        </div> 
+					    </div>
+					{{/contains}}
+				{{/each}}
+		    </div>
 
-	    <div class="item">
-	    	<h2>Spices and condiment</h2>
-		    {{#each products}}
-				{{#contains this.category "spices and condiment"}}
-					<div class="col-sm-6 col-md-6 col-lg-3">
-				        <div class="projects_holder">
-				            <div class="caption">
-				                <a class="" href="/product/{{this._id}}">
-				                    <h3 class="title">{{this.title}}</h3>
-				                </a>
-				            </div>
-				            <article class="mix mix_all" style="display: inline-block; opacity: 1;">
-				                <div class="image_holder">
-				                    <a class="" href="/product/{{this._id}}"><span class="image"><img src="{{ this.imgPath }}" class="" alt=""></span></a>
-				                     <span class="text_holder">
-				                        <span class="text_outer">
-				                            <span class="text_inner">
-				                                <p class="qbutton" href="#" >${{this.price}}</p>
-				                                <a class="qbutton" id="add-to-cart" href="/cart/{{this._id}}" >Add to cart</a>
-				                            </span>
-				                        </span> 
-				                    </span>
-				                </div>
-				            </article>
-				        </div> 
-				    </div>
-				{{/contains}}
-			{{/each}}
-	    </div>
+		    <div class="item">
+		    	<h2>Spices and condiment</h2>
+			    {{#each products}}
+					{{#contains this.category "spices and condiment"}}
+						<div class="col-sm-6 col-md-6 col-lg-3">
+					        <div class="projects_holder">
+					            <div class="caption">
+					                <a class="" href="/product/{{this._id}}">
+					                    <h3 class="title">{{this.title}}</h3>
+					                </a>
+					            </div>
+					            <article class="mix mix_all" style="display: inline-block; opacity: 1;">
+					                <div class="image_holder">
+					                    <a class="" href="/product/{{this._id}}"><span class="image"><img src="{{ this.imgPath }}" class="" alt=""></span></a>
+					                     <span class="text_holder">
+					                        <span class="text_outer">
+					                            <span class="text_inner">
+					                                <p class="qbutton" href="#" >${{this.price}}</p>
+					                                <a class="qbutton" id="add-to-cart" href="/cart/{{this._id}}" >Add to cart</a>
+					                            </span>
+					                        </span> 
+					                    </span>
+					                </div>
+					            </article>
+					        </div> 
+					    </div>
+					{{/contains}}
+				{{/each}}
+		    </div>
 
-	    <div class="item">
-	    	<h2>Cooking oil</h2>
-	    	{{#each products}}
-				{{#contains this.category "cooking oil"}}
-					<div class="col-sm-6 col-md-6 col-lg-3">
-				        <div class="projects_holder">
-				            <div class="caption">
-				                <a class="" href="/product/{{this._id}}">
-				                    <h3 class="title">{{this.title}}</h3>
-				                </a>
-				            </div>
-				            <article class="mix mix_all" style="display: inline-block; opacity: 1;">
-				                <div class="image_holder">
-				                    <a class="" href="/product/{{this._id}}"><span class="image"><img src="{{ this.imgPath }}" class="" alt=""></span></a>
-				                     <span class="text_holder">
-				                        <span class="text_outer">
-				                            <span class="text_inner">
-				                                <p class="qbutton" href="#" >${{this.price}}</p>
-				                                <a class="qbutton" id="add-to-cart" href="/cart/{{this._id}}" >Add to cart</a>
-				                            </span>
-				                        </span> 
-				                    </span>
-				                </div>
-				            </article>
-				        </div> 
-				    </div>
-				{{/contains}}
-			{{/each}}
-	    </div>
-	  </div>
+		    <div class="item">
+		    	<h2>Cooking oil</h2>
+		    	{{#each products}}
+					{{#contains this.category "cooking oil"}}
+						<div class="col-sm-6 col-md-6 col-lg-3">
+					        <div class="projects_holder">
+					            <div class="caption">
+					                <a class="" href="/product/{{this._id}}">
+					                    <h3 class="title">{{this.title}}</h3>
+					                </a>
+					            </div>
+					            <article class="mix mix_all" style="display: inline-block; opacity: 1;">
+					                <div class="image_holder">
+					                    <a class="" href="/product/{{this._id}}"><span class="image"><img src="{{ this.imgPath }}" class="" alt=""></span></a>
+					                     <span class="text_holder">
+					                        <span class="text_outer">
+					                            <span class="text_inner">
+					                                <p class="qbutton" href="#" >${{this.price}}</p>
+					                                <a class="qbutton" id="add-to-cart" href="/cart/{{this._id}}" >Add to cart</a>
+					                            </span>
+					                        </span> 
+					                    </span>
+					                </div>
+					            </article>
+					        </div> 
+					    </div>
+					{{/contains}}
+				{{/each}}
+		    </div>
+		  </div>
 
-	  <!-- Left and right controls -->
-	  <a class="left carousel-control" href="#productCarousel" data-slide="prev">
-	    <span class="glyphicon glyphicon-chevron-left"></span>
-	    <span class="sr-only">Previous</span>
-	  </a>
-	  <a class="right carousel-control" href="#productCarousel" data-slide="next">
-	    <span class="glyphicon glyphicon-chevron-right"></span>
-	    <span class="sr-only">Next</span>
-	  </a>
+		  <!-- Left and right controls -->
+		  <a class="left carousel-control" href="#productCarousel" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#productCarousel" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
 	</div>
-</div>
 </div>
