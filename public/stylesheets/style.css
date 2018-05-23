@@ -61,30 +61,41 @@ a:hover {
 
 #header #logo {
     display: block;
+    left: 0vw;
     position: absolute;
-    left: -7px;
-    top: 4px;
     width: 216px;
     height: 160px;
     z-index: 20;
 }
 
 #header .nav-bar {
+    border: none;
+    background: none;
+    box-shadow:none;
     position: relative;
     width: 100%;
     margin: 0 auto;
     height: 144px;
+    z-index: 100;
 }
-
-#header #navbar-collapse-1 {
+#header .nav-bar li{
+    background: rgb(0,0,0,0.5);
+    width: 50vw;
+    text-align:center;
+}
+#header .navbar-nav  {
     position: absolute;
-    left: 20vw;
+    left: 25%;
     top: 95px;
     height: 63px;
     margin: 0 auto;
 }
-
-#header #navbar-collapse-1 a:hover {
+#header #button-menu{
+    position: absolute;
+    top: 95px;
+    right: 50px;
+}
+#header #myNavbar a:hover {
     background: none;
 }
 
@@ -119,6 +130,7 @@ a:hover {
 .carousel-fade .carousel-control {
     z-index: 2;
 }
+
 
 
 
@@ -453,6 +465,7 @@ a:hover {
     background-size: 100% 100%;
     padding: 12px 0 21px;
     color: #fff;
+    display: none;
 }
 
 #sidebar li {
@@ -551,10 +564,29 @@ a:hover {
 #contactus .container {
     text-align: center;
 }
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 320px;
+}
 
-@media (min-width: 860px) {
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: 200px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+@media (min-width: 1214px) {
     .nav-bar {
-        width: 80vw !important;
+        width: 65vw !important;
     }
 }
 
@@ -570,6 +602,14 @@ a:hover {
         padding-bottom: 100px;
     }
     #slider .detail-holder {
+        display: block;
+    }
+    #header .nav-bar li{
+        background: none;
+        width: auto;
+        text-align:left;
+    }
+    #sidebar{
         display: block;
     }
 }
@@ -593,6 +633,11 @@ a:hover {
     }
 }
 
+@media (min-width: 768px) and (max-width: 900px) {
+   #header .collapse {
+       display: none !important;
+   }
+}
 @media (max-width: 1128px) AND (min-width: 768px) {
     #home_body {
         padding-top: 250px;

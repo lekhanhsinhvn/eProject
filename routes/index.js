@@ -131,6 +131,9 @@ router.get('/product/:id', function(req, res, next) {
 router.get('/contactus', function(req, res, next) {
     res.render('contactus', { title: 'Contact Us' });
 });
+router.get('/gallery', function(req, res, next) {
+    res.render('gallery', { title: 'Gallery' });
+});
 router.post('/contact',function(req,res,next){
     var contact = new Contact({
         name: req.body.name,
