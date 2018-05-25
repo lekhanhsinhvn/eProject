@@ -2,33 +2,38 @@
 <html>
 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{title}}</title>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script type="text/javascript" src='/javascripts/javascript.js'></script>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
     <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src='/javascripts/javascript.js'></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
 <body>
-        <header id="header">{{> header}}</header>
-        <div class="container-fluid" id="body" style="margin: 50px 15px 50px 15px; background:white;">
-                <div class="col-lg-3 col-md-3 col-sm-3 sidenav">{{>sidebar}}</div>
-                <div class="col-lg-9 col-md-9 col-sm-9" id="shop">{{{body}}}</div>
-            
-        </div>
+    <div id="header_wrapper">
+        <header id="header">
+            {{> header}}
+        </header>
+    </div>
+    <div class="container-fluid" id="body" style="width:90%; background:white; padding-top:50px;">
+        <div class="col-lg-3  sidenav">{{>sidebar}}</div>
+        <div class="col-lg-9 col-md-12 col-sm-12" id="shop">{{{body}}}</div>
+    </div>
+    <div id="footer_wrapper">
         <footer id="footer">
             {{> footer}}
         </footer>
+    </div>
 </body>
 
 </html>

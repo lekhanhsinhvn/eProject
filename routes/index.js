@@ -23,7 +23,7 @@ router.get('/', function(req, res, next) {
         }
         asyncLoop(0, function() {
             console.log(products);
-            res.render('index', { title: 'Star Organic farm', layout: 'home', products: products });
+            res.render('index', { title: 'Star Organic farm', products: products });
         });
 
     });
@@ -149,7 +149,3 @@ router.post('/contact',function(req,res,next){
     });
 });
 module.exports = router;
-
-function escapeRegex(text) {
-    return text.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
-};

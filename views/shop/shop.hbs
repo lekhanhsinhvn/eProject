@@ -1,10 +1,9 @@
-
 <div class="row">
     {{# if noMatch}}
             <h3>{{noMatch}}</h3>
         {{/if}}
     {{# each products }}
-    <div class="col-sm-6 col-md-6 col-lg-4">
+    <div class="col-sm-6 col-md-4 col-lg-4">
         <div class="projects_holder">
             <div class="caption">
                 <a class="title" href="/product/{{this._id}}">
@@ -17,8 +16,8 @@
                      <span class="text_holder">
                         <span class="text_outer">
                             <span class="text_inner">
-                                <p class="qbutton" href="#" >${{this.price}}</p>
-                                <a class="qbutton" id="add-to-cart" href="/cart/{{this._id}}" >Add to cart</a>
+                                <p class="price">${{this.price}}</p>
+                                <a class="" id="add-to-cart" href="/cart/{{this._id}}" >Add to cart</a>
                             </span>
                         </span> 
                     </span>
